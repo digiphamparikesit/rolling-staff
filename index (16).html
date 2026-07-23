@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Amplop Rahasia — Rolling Staf Instalasi Farmasi 2026</title>
+<meta name="description" content="Pengumuman rolling staf Instalasi Farmasi RSUD AM Parikesit, efektif 1 Agustus 2026">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700;9..144,900&family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B211F;
+    --ink-2:#0F2E2A;
+    --paper:#F3ECDA;
+    --paper-2:#EAE0C6;
+    --gold:#C9962E;
+    --gold-deep:#9C6E1E;
+    --wax:#8C3B2E;
+    --wax-deep:#6C2B21;
+    --mint:#5FA893;
+    --mint-deep:#3E7C6B;
+    --line: rgba(243,236,218,0.14);
+    --shadow: 0 30px 60px -25px rgba(0,0,0,0.6);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1100px 600px at 12% -10%, rgba(95,168,147,0.18), transparent 60%),
+      radial-gradient(900px 500px at 90% 10%, rgba(201,150,46,0.12), transparent 55%),
+      var(--ink);
+    color:var(--paper);
+    font-family:'Inter',sans-serif;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  .texture{
+    position:fixed; inset:0; pointer-events:none; z-index:0; opacity:0.05;
+    background-image:
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.6) 0px, transparent 1px, transparent 3px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.4) 0px, transparent 1px, transparent 3px);
+  }
+  .wrap{max-width:920px; margin:0 auto; padding:0 24px; position:relative; z-index:1;}
+
+  /* ---------- HEADER / DECREE HERO ---------- */
+  header.hero{
+    padding:56px 0 40px;
+    text-align:center;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    display:inline-flex; align-items:center; gap:10px;
+    font-family:'IBM Plex Mono',monospace;
+    font-size:12px; letter-spacing:0.22em; text-transform:uppercase;
+    color:var(--mint); opacity:0.9; margin-bottom:22px;
+  }
+  .eyebrow::before, .eyebrow::after{content:"◆"; color:var(--gold); font-size:9px;}
+  .crest{
+    width:74px; height:74px; margin:0 auto 20px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  h1.title{
+    font-family:'Fraunces', serif;
+    font-weight:700;
+    font-size:clamp(32px, 5.5vw, 54px);
+    line-height:1.06;
+    margin:0 0 14px;
+    color:var(--paper);
+    letter-spacing:-0.01em;
+  }
+  h1.title em{
+    font-style:italic;
+    font-weight:400;
+    color:var(--gold);
+  }
+  .subtitle{
+    font-size:16px; color:rgba(243,236,218,0.68);
+    max-width:560px; margin:0 auto 26px; line-height:1.6;
+  }
+  .date-seal{
+    display:inline-flex; align-items:center; gap:12px;
+    background:linear-gradient(180deg, var(--mint), var(--mint-deep));
+    color:#08201B; padding:12px 24px; border-radius:100px;
+    font-family:'IBM Plex Mono', monospace; font-size:13px; font-weight:600;
+    letter-spacing:0.04em; box-shadow: var(--shadow);
+  }
+  .date-seal b{font-family:'Fraunces',serif; font-size:15px; font-weight:700;}
+
+  /* ---------- SECTION LABELS ---------- */
+  .section{padding:64px 0; border-bottom:1px solid var(--line);}
+  .section:last-of-type{border-bottom:none;}
+  .sec-label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px; letter-spacing:0.18em; text-transform:uppercase;
+    color:var(--gold); margin-bottom:10px; display:block;
+  }
+  .sec-title{
+    font-family:'Fraunces', serif; font-weight:700;
+    font-size:clamp(24px,3.6vw,34px); margin:0 0 12px; color:var(--paper);
+  }
+  .sec-desc{color:rgba(243,236,218,0.66); max-width:600px; line-height:1.65; margin-bottom:36px;}
+
+  /* ---------- MYSTERY REVEAL CARD ---------- */
+  .envelope-stage{
+    background: linear-gradient(160deg, rgba(243,236,218,0.05), rgba(243,236,218,0.02));
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:40px;
+    position:relative;
+    overflow:hidden;
+  }
+  .envelope-stage::before{
+    content:"";
+    position:absolute; top:-40%; right:-10%;
+    width:340px; height:340px; border-radius:50%;
+    background: radial-gradient(circle, rgba(95,168,147,0.16), transparent 70%);
+    pointer-events:none;
+  }
+  .search-row{
+    display:flex; gap:12px; position:relative; z-index:2; flex-wrap:wrap;
+  }
+  #nameInput{
+    flex:1 1 260px;
+    background:var(--paper);
+    color:var(--ink);
+    border:none; border-radius:12px;
+    padding:16px 18px;
+    font-size:16px; font-family:'Inter',sans-serif; font-weight:500;
+    outline:none;
+    box-shadow: inset 0 0 0 2px transparent;
+    transition: box-shadow 0.2s ease;
+  }
+  #nameInput:focus{ box-shadow: inset 0 0 0 2px var(--gold); }
+  #openBtn{
+    background:linear-gradient(180deg, var(--gold), var(--gold-deep));
+    color:#221503; border:none; border-radius:12px;
+    padding:16px 26px; font-size:15px; font-weight:700;
+    font-family:'Inter',sans-serif;
+    cursor:pointer; letter-spacing:0.01em;
+    box-shadow: 0 12px 24px -10px rgba(201,150,46,0.5);
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    white-space:nowrap;
+  }
+  #openBtn:hover{ transform:translateY(-2px); box-shadow:0 16px 30px -10px rgba(201,150,46,0.6); }
+  #openBtn:active{ transform:translateY(0); }
+
+  .suggestions{
+    position:relative; z-index:5;
+    margin-top:6px;
+    background:var(--paper);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow: var(--shadow);
+    display:none;
+  }
+  .suggestions.show{display:block;}
+  .suggestions div{
+    padding:12px 18px; color:var(--ink); font-size:14px; font-weight:500;
+    cursor:pointer; border-bottom:1px solid rgba(11,33,31,0.08);
+  }
+  .suggestions div:last-child{border-bottom:none;}
+  .suggestions div:hover, .suggestions div.active{ background:rgba(201,150,46,0.16); }
+
+  .stage-hint{
+    margin-top:16px; font-size:13px; color:rgba(243,236,218,0.45);
+    font-family:'IBM Plex Mono', monospace; position:relative; z-index:2;
+  }
+
+  /* result card */
+  #result{ margin-top:32px; position:relative; z-index:2; min-height:0; }
+  .reveal-card{
+    background:var(--paper); color:var(--ink); border-radius:18px;
+    padding:32px; position:relative;
+    transform-origin:top center;
+    animation: unfold 0.6s cubic-bezier(.2,.8,.2,1);
+    box-shadow: var(--shadow);
+    overflow:hidden;
+  }
+  @keyframes unfold{
+    0%{ transform: scaleY(0.05) rotateX(35deg); opacity:0; }
+    55%{ transform: scaleY(1.03) rotateX(0deg); opacity:1; }
+    100%{ transform: scaleY(1) rotateX(0deg); }
+  }
+  .reveal-card::before{
+    content:"";
+    position:absolute; top:0; left:0; right:0; height:6px;
+    background: repeating-linear-gradient(90deg, var(--wax) 0 14px, var(--gold) 14px 28px);
+  }
+  .reveal-name{
+    font-family:'Fraunces', serif; font-weight:700; font-size:26px;
+    margin:0 0 6px; color:var(--ink);
+  }
+  .reveal-tag{
+    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--mint-deep); font-weight:600;
+    margin-bottom:22px; display:block;
+  }
+  .route{
+    display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  }
+  .route-box{
+    flex:1 1 200px;
+    border-radius:14px; padding:18px 20px;
+    background:var(--paper-2);
+  }
+  .route-box.new{
+    background: linear-gradient(160deg, var(--mint), var(--mint-deep));
+    color:#08201B;
+  }
+  .route-label{
+    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em;
+    text-transform:uppercase; opacity:0.65; display:block; margin-bottom:6px;
+  }
+  .route-value{
+    font-family:'Fraunces', serif; font-weight:600; font-size:19px; line-height:1.25;
+  }
+  .route-arrow{
+    font-size:22px; color:var(--gold-deep); flex:0 0 auto;
+  }
+  .status-pill{
+    display:inline-block; margin-top:20px;
+    font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600;
+    padding:8px 16px; border-radius:100px; letter-spacing:0.03em;
+  }
+  .status-pill.move{ background:rgba(140,59,46,0.12); color:var(--wax); border:1px solid rgba(140,59,46,0.3); }
+  .status-pill.stay{ background:rgba(95,168,147,0.14); color:var(--mint-deep); border:1px solid rgba(95,168,147,0.35); }
+
+  .not-found{
+    background:var(--paper); color:var(--ink); border-radius:18px; padding:28px 32px;
+    animation: unfold 0.5s ease;
+    box-shadow: var(--shadow);
+  }
+  .not-found b{font-family:'Fraunces',serif;}
+
+  /* ---------- UNIT MAP ---------- */
+  .unit-grid{
+    display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr));
+    gap:16px;
+  }
+  .unit-card{
+    background:rgba(243,236,218,0.04);
+    border:1px solid var(--line);
+    border-radius:16px; padding:22px;
+  }
+  .unit-old{
+    font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em;
+    color:rgba(243,236,218,0.5); text-transform:uppercase; margin-bottom:10px;
+    display:flex; align-items:center; gap:8px;
+  }
+  .unit-old::before{content:"◈"; color:var(--wax);}
+  .unit-new-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px;}
+  .unit-new-list li{
+    font-family:'Fraunces', serif; font-weight:600; font-size:16px;
+    color:var(--gold); position:relative; padding-left:18px;
+  }
+  .unit-new-list li::before{
+    content:"→"; position:absolute; left:0; color:var(--mint);
+  }
+
+  /* ---------- KARU / KOORDINATOR ---------- */
+  .locked-box{
+    background: linear-gradient(150deg, rgba(140,59,46,0.14), rgba(140,59,46,0.03));
+    border:1px solid rgba(140,59,46,0.3);
+    border-radius:20px; padding:44px; text-align:center; position:relative;
+  }
+  .lock-icon{
+    width:56px; height:56px; margin:0 auto 20px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .locked-title{
+    font-family:'Fraunces',serif; font-weight:700; font-size:24px; margin-bottom:10px;
+  }
+  .locked-desc{ color:rgba(243,236,218,0.6); max-width:460px; margin:0 auto 22px; line-height:1.6; }
+  .locked-tag{
+    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:12px;
+    letter-spacing:0.1em; text-transform:uppercase; color:var(--wax);
+    border:1px dashed rgba(140,59,46,0.5); padding:10px 20px; border-radius:100px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer{ padding:48px 0 60px; text-align:center; }
+  .sign-line{
+    max-width:280px; margin:0 auto 14px; border-top:1px solid var(--line); padding-top:14px;
+  }
+  .sign-name{ font-family:'Fraunces',serif; font-weight:600; font-size:16px; }
+  .sign-role{ font-size:12px; color:rgba(243,236,218,0.5); font-family:'IBM Plex Mono',monospace; letter-spacing:0.06em; }
+  .footer-meta{ margin-top:26px; font-size:12px; color:rgba(243,236,218,0.35); font-family:'IBM Plex Mono',monospace; }
+
+  @media (max-width:640px){
+    .envelope-stage{padding:26px 20px;}
+    .section{padding:48px 0;}
+    .route{flex-direction:column; align-items:stretch;}
+    .route-arrow{ transform:rotate(90deg); text-align:center; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; }
+  }
+</style>
+</head>
+<body>
+<div class="texture"></div>
+<div class="wrap">
+
+  <header class="hero">
+    <span class="eyebrow">Instalasi Farmasi &nbsp;·&nbsp; RSUD AM Parikesit</span>
+    <div class="crest">
+      <svg width="74" height="74" viewBox="0 0 74 74" fill="none">
+        <circle cx="37" cy="37" r="36" stroke="#C9962E" stroke-width="1.2" opacity="0.5"/>
+        <circle cx="37" cy="37" r="29" fill="#5FA893" opacity="0.12"/>
+        <path d="M25 44 C25 44 30 30 37 30 C44 30 49 44 49 44" stroke="#C9962E" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <ellipse cx="37" cy="46" rx="15" ry="6" stroke="#5FA893" stroke-width="2" fill="none"/>
+        <circle cx="37" cy="24" r="4" fill="#C9962E"/>
+      </svg>
+    </div>
+    <h1 class="title">Amplop <em>Rahasia</em><br>Rolling Staf 2026</h1>
+    <p class="subtitle">Satu amplop, satu nama, satu tujuan baru. Cari namamu dan buka segelnya untuk mengetahui ke unit pelayanan mana kamu ditugaskan — atau apakah kamu tetap bertahan di unit lama.</p>
+    <div class="date-seal">🗓️ Efektif <b>1 Agustus 2026</b></div>
+  </header>
+
+  <!-- ============ MYSTERY REVEAL ============ -->
+  <section class="section" id="cari">
+    <span class="sec-label">Babak 01 — Buka Amplopmu</span>
+    <h2 class="sec-title">Kamu dipindah, atau tetap di sini?</h2>
+    <p class="sec-desc">Ketik nama lengkap kamu persis seperti di daftar absensi, lalu tekan tombol segel untuk membuka amplop misteri berisi unit penugasanmu mulai 1 Agustus 2026.</p>
+
+    <div class="envelope-stage">
+      <div class="search-row">
+        <input id="nameInput" type="text" placeholder="Ketik nama kamu, mis. Aji Yuhda Wijaya…" autocomplete="off">
+        <button id="openBtn">🕵️ Buka Segel</button>
+      </div>
+      <div class="suggestions" id="suggestions"></div>
+      <div class="stage-hint">89 amplop telah disiapkan oleh Instalasi Farmasi. Nama tidak sensitif huruf besar/kecil.</div>
+      <div id="result"></div>
+    </div>
+  </section>
+
+  <!-- ============ UNIT MAP ============ -->
+  <section class="section" id="peta">
+    <span class="sec-label">Babak 02 — Peta Wilayah Baru</span>
+    <h2 class="sec-title">Perubahan Nama Unit Pelayanan</h2>
+    <p class="sec-desc">Beberapa unit lama melebur atau berganti nama menjadi unit-unit Depo Farmasi baru. Berikut arah perubahannya, sebagai pegangan sebelum kamu membuka amplopmu.</p>
+    <div class="unit-grid" id="unitGrid"></div>
+  </section>
+
+  <!-- ============ KARU / KOORDINATOR ============ -->
+  <section class="section" id="karu">
+    <span class="sec-label">Babak 03 — Rahasia Terakhir</span>
+    <h2 class="sec-title">Siapa Kepala Ruang & Koordinator Unit?</h2>
+    <div class="locked-box">
+      <div class="lock-icon">
+        <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+          <rect x="14" y="26" width="28" height="20" rx="4" fill="#8C3B2E" opacity="0.85"/>
+          <path d="M19 26v-6a9 9 0 0 1 18 0v6" stroke="#C9962E" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <circle cx="28" cy="35" r="3" fill="#F3ECDA"/>
+          <rect x="26.5" y="37" width="3" height="6" rx="1.5" fill="#F3ECDA"/>
+        </svg>
+      </div>
+      <div class="locked-title">Masih Tersegel</div>
+      <p class="locked-desc">Penunjukan Kepala Ruang dan Koordinator untuk setiap unit pelayanan farmasi sedang difinalisasi oleh manajemen. Amplop ini akan dibuka menyusul — pantau terus papan pengumuman dan grup resmi instalasi.</p>
+      <span class="locked-tag">Nama Menyusul</span>
+    </div>
+  </section>
+
+  <footer>
+    <div class="sign-line">
+      <div class="sign-name">Instalasi Farmasi RSUD AM Parikesit</div>
+      <div class="sign-role">Panitia Rolling Staf 2026</div>
+    </div>
+    <div class="footer-meta">Pengumuman ini bersifat internal · Berlaku efektif 1 Agustus 2026</div>
+  </footer>
+
+</div>
+
+<script>
+const staffData = [{"nama": "Aji Yuhda Wijaya,S.Farm.Apt", "lama": "CENDERAWASIH", "baru": "Depo Farmasi Cenderawasih"}, {"nama": "Apt. Rulina Citra, S.Farm", "lama": "CENDERAWASIH", "baru": "Farmasi Klinis"}, {"nama": "Ita Addawiyati,Amd.far", "lama": "CENDERAWASIH", "baru": "Depo Farmasi Cenderawasih"}, {"nama": "Dian Adrian", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Eka Fitriani Purwanti", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Mayang Azhari", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Muhammad Junaidi", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Tini", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Vivi Elvira, S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Viona Riska Dwi Lestari", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Hamziah Filza Fauziah, S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Apt.Chica Dwi Cahya,S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Apt. Halimatusya'diah,S.Farm", "lama": "FARM TERPADU", "baru": "Farmasi Klinis"}, {"nama": "Apt. Rina Safitri, S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Apt. Dwi Juwita Ningsih, S.Farm.", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Framita Sari, S.Farm.", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Liani Meyanti, S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Ngesti Mayang Pramandayanti, S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Emilia Pratiwi, S.Farm", "lama": "FARM TERPADU", "baru": "Farmasi Klinis"}, {"nama": "Andrilidiani,Amd.far", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Dani Abdul Muttaqin, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Eko Hadi Noersyamsih,A.Md.FAr", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Mila Al Jufri, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Mila Ulfah Farista,Amd.far", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Nabila Safitri, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Nurma Safitri, A.Md.Far", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Putri Apriliana Maharani, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Henny Puspita Wati, Amd. Far", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Rizka Oktaviani, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Cenderawasih"}, {"nama": "Asanah, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Adelia Nor Ramadhini, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Nur Assyifa Jamiati, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Muhammad Irsandi Oktavianur", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Arjudin", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Yudistira Ang Jaya", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Fitriani", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Sugeng Sirojuddin", "lama": "GD.FARMASI", "baru": "Instalasi Farmasi"}, {"nama": "Indra Fathur Firmansyah, S.Farm", "lama": "GD.FARMASI", "baru": "Instalasi Farmasi"}, {"nama": "Ristianti Aprisia P,S.Farm.Apt", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Helen Tapilouw,S.Si.Apt", "lama": "GD.FARMASI", "baru": "Instalasi Farmasi"}, {"nama": "Hira Nur Silmi, S.Farm, Apt", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Hj.Fenny Heryani,Amd.far", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Dinah Retno Endah.A.Md.Farm", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Susiyanto Pangestu, Amd.Far", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Elly Suzanawati,A.Md.An", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Febrianto,A.Md.Far", "lama": "IBS", "baru": "Depo Farmasi IBS"}, {"nama": "Supiatun Nissa,Amd.Far", "lama": "IBS", "baru": "Depo Farmasi IBS"}, {"nama": "Desi Ana Susanti,Amd.Farm", "lama": "IBS", "baru": "Depo Farmasi IBS"}, {"nama": "Risma Saputri,A.Md.Farm", "lama": "IBS", "baru": "Depo Farmasi IBS"}, {"nama": "Siti Nurjanah,Amd.far", "lama": "IBS", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Apt. Yunisca Febrianty, S.Farm", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Ria Novita Sari, A.Md.Farm", "lama": "IGD", "baru": "Depo Farmasi IBS"}, {"nama": "Zahratun Nisa,A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Ani Eka Indriyani,Amd.Farm", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Sri Utami,Amd.far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Imroatul Widya Ningrat,A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Fatmah, A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Riza Vina,A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Dewi Rachmasuari,A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Yulinda Christine, A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Kurnia Della, A.Md.Farm", "lama": "RANAP", "baru": "Depo Farmasi IGD"}, {"nama": "Apt. Mayrani Permata Sari, S.Farm.", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Apt. Akhmad Fahri R, S.Farm", "lama": "RANAP", "baru": "Depo Farmasi Onkologi"}, {"nama": "Apt. Fariana Nur Santi, S.Farm", "lama": "RANAP", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Muhammad Fajar Atma Dinata, S.Farm", "lama": "RANAP", "baru": "Farmasi Klinis"}, {"nama": "Apt. Monalyta Panjaitan, S.Farm", "lama": "RANAP", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Rizka Arianie Rusli, S.Farm.", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Edy Sudiyanto", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Jakpar", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Erwin", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Rahmawati,Amd.far", "lama": "RANAP", "baru": "Depo Farmasi Onkologi"}, {"nama": "Nurfitria Dian Hanjaya, Amd. Far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Monica Happying", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Amelia Tri Untari,A. Md.Farm", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Evi Kurniawati.A.Md.Far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Hairun Nissa,A.Md.Far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Nurhasanah,A.Md.Farm", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Ulfah Musyarofah Indah Sari, A.Md.Far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Yuni Anisa Ningsih,Amd.Farm", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Yudha Setiawan,Amd.far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Achmad Mustafa,Amd.far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Apt. Badzlina Azyyati Maizan, S.Farm., M.Farm.Klin", "lama": "RANAP", "baru": "Farmasi Klinis"}, {"nama": "Apt.Chaerul Reza Mahendra, S.Farm", "lama": "UPSS", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Vindy Rofandi,Amd.far", "lama": "UPSS", "baru": "Depo Farmasi Onkologi"}, {"nama": "Anita Rahim,Amd.far", "lama": "UPSS", "baru": "Depo Farmasi Onkologi"}, {"nama": "Apt. Merry Handayani, S.Farm", "lama": "BARU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Apt. Shella Alifa El Safina, S.Farm", "lama": "BARU", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Dien Damar'atus Zahra, A.Md.Farm", "lama": "BARU", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Apt. Elsa Edita, S.Farm", "lama": "BARU", "baru": "Farmasi Klinis"}];
+
+/* ---------- normalize helper ---------- */
+function norm(s){ return s.toLowerCase().normalize('NFKD').replace(/[^a-z0-9 ]/g,'').replace(/\s+/g,' ').trim(); }
+
+/* ---------- build unit map from data ---------- */
+(function buildUnitMap(){
+  const map = {};
+  staffData.forEach(d=>{
+    if(!map[d.lama]) map[d.lama] = new Set();
+    map[d.lama].add(d.baru);
+  });
+  const grid = document.getElementById('unitGrid');
+  Object.keys(map).sort().forEach(oldUnit=>{
+    const card = document.createElement('div');
+    card.className = 'unit-card';
+    const news = Array.from(map[oldUnit]).sort();
+    card.innerHTML = `
+      <div class="unit-old">${oldUnit}</div>
+      <ul class="unit-new-list">${news.map(n=>`<li>${n}</li>`).join('')}</ul>
+    `;
+    grid.appendChild(card);
+  });
+})();
+
+/* ---------- search + suggestions ---------- */
+const input = document.getElementById('nameInput');
+const suggBox = document.getElementById('suggestions');
+const resultBox = document.getElementById('result');
+let activeIndex = -1;
+
+function renderSuggestions(query){
+  const q = norm(query);
+  suggBox.innerHTML = '';
+  if(!q){ suggBox.classList.remove('show'); return; }
+  const matches = staffData.filter(d=> norm(d.nama).includes(q)).slice(0,6);
+  if(matches.length === 0){ suggBox.classList.remove('show'); return; }
+  matches.forEach((m)=>{
+    const div = document.createElement('div');
+    div.textContent = m.nama;
+    div.addEventListener('click', ()=>{
+      input.value = m.nama;
+      suggBox.classList.remove('show');
+      revealFor(m.nama);
+    });
+    suggBox.appendChild(div);
+  });
+  suggBox.classList.add('show');
+  activeIndex = -1;
+}
+
+input.addEventListener('input', (e)=> renderSuggestions(e.target.value));
+input.addEventListener('focus', (e)=> renderSuggestions(e.target.value));
+document.addEventListener('click', (e)=>{
+  if(!e.target.closest('.envelope-stage')) suggBox.classList.remove('show');
+});
+input.addEventListener('keydown', (e)=>{
+  const items = Array.from(suggBox.children);
+  if(e.key === 'ArrowDown'){ e.preventDefault(); activeIndex = Math.min(activeIndex+1, items.length-1); updateActive(items); }
+  else if(e.key === 'ArrowUp'){ e.preventDefault(); activeIndex = Math.max(activeIndex-1, 0); updateActive(items); }
+  else if(e.key === 'Enter'){
+    e.preventDefault();
+    if(activeIndex >=0 && items[activeIndex]){ items[activeIndex].click(); }
+    else { revealFor(input.value); suggBox.classList.remove('show'); }
+  }
+});
+function updateActive(items){
+  items.forEach((it,i)=> it.classList.toggle('active', i===activeIndex));
+  if(items[activeIndex]) items[activeIndex].scrollIntoView({block:'nearest'});
+}
+
+document.getElementById('openBtn').addEventListener('click', ()=>{
+  suggBox.classList.remove('show');
+  revealFor(input.value);
+});
+
+function revealFor(rawName){
+  const q = norm(rawName);
+  if(!q){
+    resultBox.innerHTML = `<div class="not-found">Ketik dulu namamu di kotak pencarian ya. ✍️</div>`;
+    return;
+  }
+  const found = staffData.find(d=> norm(d.nama) === q) || staffData.find(d=> norm(d.nama).includes(q));
+  if(!found){
+    resultBox.innerHTML = `
+      <div class="not-found">
+        <b>Amplop tidak ditemukan.</b><br>
+        Coba periksa kembali ejaan nama lengkapmu sesuai daftar absensi Instalasi Farmasi, atau hubungi panitia rolling staf.
+      </div>`;
+    return;
+  }
+  const isMoving = norm(found.lama) !== norm(found.baru);
+  resultBox.innerHTML = `
+    <div class="reveal-card">
+      <span class="reveal-tag">Amplop atas nama</span>
+      <h3 class="reveal-name">${found.nama}</h3>
+      <div class="route">
+        <div class="route-box old">
+          <span class="route-label">Unit Lama</span>
+          <div class="route-value">${found.lama}</div>
+        </div>
+        <div class="route-arrow">➜</div>
+        <div class="route-box new">
+          <span class="route-label">Unit Baru · Mulai 1 Agustus 2026</span>
+          <div class="route-value">${found.baru}</div>
+        </div>
+      </div>
+      <span class="status-pill ${isMoving ? 'move' : 'stay'}">
+        ${isMoving ? '🚚 Kamu dirolling ke unit baru' : '📌 Kamu tetap di penempatan ini'}
+      </span>
+    </div>`;
+}
+</script>
+</body>
+</html>
