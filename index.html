@@ -10,13 +10,11 @@
 <style>
   :root{
     --ink:#0B211F;
-    --ink-2:#0F2E2A;
     --paper:#F3ECDA;
     --paper-2:#EAE0C6;
     --gold:#C9962E;
     --gold-deep:#9C6E1E;
     --wax:#8C3B2E;
-    --wax-deep:#6C2B21;
     --mint:#5FA893;
     --mint-deep:#3E7C6B;
     --line: rgba(243,236,218,0.14);
@@ -41,72 +39,70 @@
       repeating-linear-gradient(0deg, rgba(255,255,255,0.6) 0px, transparent 1px, transparent 3px),
       repeating-linear-gradient(90deg, rgba(255,255,255,0.4) 0px, transparent 1px, transparent 3px);
   }
-  .wrap{max-width:920px; margin:0 auto; padding:0 24px; position:relative; z-index:1;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px; position:relative; z-index:1;}
 
-  /* ---------- HEADER / DECREE HERO (rata kiri) ---------- */
-  header.hero{
-    padding:56px 0 40px;
-    text-align:left;
-    border-bottom:1px solid var(--line);
+  /* ---------- DASHBOARD 2x2 ---------- */
+  .dashboard{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    padding:44px 0 12px;
   }
+  .quad{
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:32px;
+    background: linear-gradient(160deg, rgba(243,236,218,0.035), rgba(243,236,218,0.012));
+    min-width:0;
+  }
+  .quad-title{ display:flex; flex-direction:column; justify-content:center; }
+  @media (max-width:900px){
+    .dashboard{ grid-template-columns:1fr; }
+  }
+
+  /* ---------- TITLE QUAD ---------- */
   .eyebrow{
     display:inline-flex; align-items:center; gap:10px;
     font-family:'IBM Plex Mono',monospace;
     font-size:12px; letter-spacing:0.22em; text-transform:uppercase;
-    color:var(--mint); opacity:0.9; margin-bottom:22px;
+    color:var(--mint); opacity:0.9; margin-bottom:18px;
   }
   .eyebrow::before{content:"◆"; color:var(--gold); font-size:9px;}
-  .crest{
-    width:74px; height:74px; margin:0 0 20px;
-    display:flex; align-items:center; justify-content:flex-start;
-  }
+  .crest{ width:56px; height:56px; margin:0 0 16px; display:flex; align-items:center; justify-content:flex-start; }
   h1.title{
-    font-family:'Fraunces', serif;
-    font-weight:700;
-    font-size:clamp(32px, 5.5vw, 54px);
-    line-height:1.06;
-    margin:0 0 14px;
-    color:var(--paper);
-    letter-spacing:-0.01em;
+    font-family:'Fraunces', serif; font-weight:700;
+    font-size:clamp(26px, 3.2vw, 40px);
+    line-height:1.08; margin:0 0 12px; color:var(--paper); letter-spacing:-0.01em;
+    text-align:left;
   }
-  h1.title em{
-    font-style:italic;
-    font-weight:400;
-    color:var(--gold);
-  }
-  .subtitle{
-    font-size:16px; color:rgba(243,236,218,0.68);
-    max-width:560px; margin:0 0 26px; line-height:1.6;
-  }
+  h1.title em{ font-style:italic; font-weight:400; color:var(--gold); }
+  .subtitle{ font-size:15px; color:rgba(243,236,218,0.68); max-width:460px; margin:0 0 20px; line-height:1.6; }
   .date-seal{
-    display:inline-flex; align-items:center; gap:12px;
+    display:inline-flex; align-items:center; gap:10px; align-self:flex-start;
     background:linear-gradient(180deg, var(--mint), var(--mint-deep));
-    color:#08201B; padding:12px 24px; border-radius:100px;
-    font-family:'IBM Plex Mono', monospace; font-size:13px; font-weight:600;
+    color:#08201B; padding:11px 20px; border-radius:100px;
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; font-weight:600;
     letter-spacing:0.04em; box-shadow: var(--shadow);
   }
-  .date-seal b{font-family:'Fraunces',serif; font-size:15px; font-weight:700;}
+  .date-seal b{font-family:'Fraunces',serif; font-size:14px; font-weight:700;}
 
-  /* ---------- SECTION LABELS ---------- */
-  .section{padding:64px 0; border-bottom:1px solid var(--line);}
-  .section:last-of-type{border-bottom:none;}
+  /* ---------- BABAK QUAD LABELS ---------- */
   .sec-label{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px; letter-spacing:0.18em; text-transform:uppercase;
-    color:var(--gold); margin-bottom:10px; display:block;
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; letter-spacing:0.16em;
+    text-transform:uppercase; color:var(--gold); margin-bottom:8px; display:block;
   }
   .sec-title{
     font-family:'Fraunces', serif; font-weight:700;
-    font-size:clamp(24px,3.6vw,34px); margin:0 0 12px; color:var(--paper);
+    font-size:clamp(19px,2.4vw,24px); margin:0 0 10px; color:var(--paper);
   }
-  .sec-desc{color:rgba(243,236,218,0.66); max-width:600px; line-height:1.65; margin-bottom:28px;}
+  .sec-desc{ color:rgba(243,236,218,0.66); line-height:1.6; margin-bottom:22px; font-size:14px; }
 
-  /* ---------- BABAK TOGGLE BUTTON (shared) ---------- */
+  /* ---------- BABAK TOGGLE BUTTON ---------- */
   .babak-toggle{
     display:inline-flex; align-items:center; gap:10px;
     background:linear-gradient(180deg, var(--gold), var(--gold-deep));
     color:#221503; border:none; border-radius:100px;
-    padding:14px 26px; font-size:14px; font-weight:700;
+    padding:13px 24px; font-size:13.5px; font-weight:700;
     font-family:'Inter',sans-serif; letter-spacing:0.01em;
     cursor:pointer; box-shadow: 0 12px 24px -10px rgba(201,150,46,0.5);
     transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -116,94 +112,59 @@
   .babak-toggle .chev{ transition: transform 0.25s ease; display:inline-block; }
   .babak-toggle.open .chev{ transform:rotate(180deg); }
 
-  .babak-content{
-    margin-top:26px;
-    display:none;
-    animation: fadeSlide 0.45s ease;
-  }
+  .babak-content{ margin-top:24px; display:none; animation: fadeSlide 0.45s ease; }
   .babak-content.show{ display:block; }
-  @keyframes fadeSlide{
-    from{ opacity:0; transform:translateY(-10px); }
-    to{ opacity:1; transform:translateY(0); }
-  }
+  @keyframes fadeSlide{ from{ opacity:0; transform:translateY(-10px); } to{ opacity:1; transform:translateY(0); } }
 
-  /* ---------- MYSTERY REVEAL CARD ---------- */
+  /* ---------- MYSTERY REVEAL CARD (BABAK 1) ---------- */
   .envelope-stage{
     background: linear-gradient(160deg, rgba(243,236,218,0.05), rgba(243,236,218,0.02));
-    border:1px solid var(--line);
-    border-radius:20px;
-    padding:40px;
-    position:relative;
-    overflow:hidden;
+    border:1px solid var(--line); border-radius:18px; padding:26px;
+    position:relative; overflow:hidden;
   }
-  .envelope-stage::before{
-    content:"";
-    position:absolute; top:-40%; right:-10%;
-    width:340px; height:340px; border-radius:50%;
-    background: radial-gradient(circle, rgba(95,168,147,0.16), transparent 70%);
-    pointer-events:none;
-  }
-  .search-row{
-    display:flex; gap:12px; position:relative; z-index:2; flex-wrap:wrap;
-  }
+  .search-row{ display:flex; gap:10px; position:relative; z-index:2; flex-wrap:wrap; }
   #nameInput{
-    flex:1 1 260px;
-    background:var(--paper);
-    color:var(--ink);
-    border:none; border-radius:12px;
-    padding:16px 18px;
-    font-size:16px; font-family:'Inter',sans-serif; font-weight:500;
-    outline:none;
-    box-shadow: inset 0 0 0 2px transparent;
-    transition: box-shadow 0.2s ease;
+    flex:1 1 200px; background:var(--paper); color:var(--ink);
+    border:none; border-radius:12px; padding:15px 16px;
+    font-size:15px; font-family:'Inter',sans-serif; font-weight:500; outline:none;
+    box-shadow: inset 0 0 0 2px transparent; transition: box-shadow 0.2s ease;
   }
   #nameInput:focus{ box-shadow: inset 0 0 0 2px var(--gold); }
   #openBtn{
     background:linear-gradient(180deg, var(--gold), var(--gold-deep));
     color:#221503; border:none; border-radius:12px;
-    padding:16px 26px; font-size:15px; font-weight:700;
-    font-family:'Inter',sans-serif;
+    padding:15px 22px; font-size:14px; font-weight:700; font-family:'Inter',sans-serif;
     cursor:pointer; letter-spacing:0.01em;
     box-shadow: 0 12px 24px -10px rgba(201,150,46,0.5);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-    white-space:nowrap;
+    transition: transform 0.15s ease, box-shadow 0.15s ease; white-space:nowrap;
   }
   #openBtn:hover{ transform:translateY(-2px); box-shadow:0 16px 30px -10px rgba(201,150,46,0.6); }
   #openBtn:active{ transform:translateY(0); }
 
   .suggestions{
-    position:relative; z-index:5;
-    margin-top:6px;
-    background:var(--paper);
-    border-radius:12px;
-    overflow:hidden;
-    box-shadow: var(--shadow);
-    display:none;
+    position:relative; z-index:5; margin-top:6px; background:var(--paper);
+    border-radius:12px; overflow:hidden; box-shadow: var(--shadow); display:none;
   }
   .suggestions.show{display:block;}
   .suggestions div{
-    padding:12px 18px; color:var(--ink); font-size:14px; font-weight:500;
+    padding:11px 16px; color:var(--ink); font-size:13.5px; font-weight:500;
     cursor:pointer; border-bottom:1px solid rgba(11,33,31,0.08);
   }
   .suggestions div:last-child{border-bottom:none;}
   .suggestions div:hover, .suggestions div.active{ background:rgba(201,150,46,0.16); }
 
   .stage-hint{
-    margin-top:16px; font-size:13px; color:rgba(243,236,218,0.45);
+    margin-top:14px; font-size:12px; color:rgba(243,236,218,0.45);
     font-family:'IBM Plex Mono', monospace; position:relative; z-index:2;
   }
 
-  /* result card */
-  #result{ margin-top:0; position:relative; z-index:2; min-height:0; }
-  #result:empty{ margin-top:0; }
-  #result:not(:empty){ margin-top:32px; }
+  #result{ margin-top:0; position:relative; z-index:2; }
+  #result:not(:empty){ margin-top:24px; }
   .reveal-card{
-    background:var(--paper); color:var(--ink); border-radius:18px;
-    padding:32px; position:relative;
-    transform-origin:top center;
+    background:var(--paper); color:var(--ink); border-radius:16px;
+    padding:26px; position:relative; transform-origin:top center;
     animation: unfold 0.6s cubic-bezier(.2,.8,.2,1);
-    box-shadow: var(--shadow);
-    overflow:hidden;
+    box-shadow: var(--shadow); overflow:hidden;
   }
   @keyframes unfold{
     0%{ transform: scaleY(0.05) rotateX(35deg); opacity:0; }
@@ -211,132 +172,90 @@
     100%{ transform: scaleY(1) rotateX(0deg); }
   }
   .reveal-card::before{
-    content:"";
-    position:absolute; top:0; left:0; right:0; height:6px;
+    content:""; position:absolute; top:0; left:0; right:0; height:6px;
     background: repeating-linear-gradient(90deg, var(--wax) 0 14px, var(--gold) 14px 28px);
   }
-  .reveal-card.newstaff::before{
-    background: repeating-linear-gradient(90deg, var(--mint-deep) 0 14px, var(--mint) 14px 28px);
-  }
-  .reveal-name{
-    font-family:'Fraunces', serif; font-weight:700; font-size:26px;
-    margin:0 0 6px; color:var(--ink);
-  }
+  .reveal-card.newstaff::before{ background: repeating-linear-gradient(90deg, var(--mint-deep) 0 14px, var(--mint) 14px 28px); }
+  .reveal-name{ font-family:'Fraunces', serif; font-weight:700; font-size:21px; margin:0 0 6px; color:var(--ink); }
   .reveal-tag{
-    font-family:'IBM Plex Mono', monospace; font-size:11px; letter-spacing:0.14em;
-    text-transform:uppercase; color:var(--mint-deep); font-weight:600;
-    margin-bottom:22px; display:block;
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--mint-deep); font-weight:600; margin-bottom:18px; display:block;
   }
-  .route{
-    display:flex; align-items:center; gap:18px; flex-wrap:wrap;
-  }
-  .route-box{
-    flex:1 1 200px;
-    border-radius:14px; padding:18px 20px;
-    background:var(--paper-2);
-  }
-  .route-box.new{
-    background: linear-gradient(160deg, var(--mint), var(--mint-deep));
-    color:#08201B;
-  }
+  .route{ display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+  .route-box{ flex:1 1 160px; border-radius:12px; padding:16px 18px; background:var(--paper-2); }
+  .route-box.new{ background: linear-gradient(160deg, var(--mint), var(--mint-deep)); color:#08201B; }
   .route-label{
-    font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.14em;
+    font-family:'IBM Plex Mono',monospace; font-size:9.5px; letter-spacing:0.13em;
     text-transform:uppercase; opacity:0.65; display:block; margin-bottom:6px;
   }
-  .route-value{
-    font-family:'Fraunces', serif; font-weight:600; font-size:19px; line-height:1.25;
-  }
-  .route-arrow{
-    font-size:22px; color:var(--gold-deep); flex:0 0 auto;
-  }
+  .route-value{ font-family:'Fraunces', serif; font-weight:600; font-size:16px; line-height:1.25; }
+  .route-arrow{ font-size:20px; color:var(--gold-deep); flex:0 0 auto; }
   .status-pill{
-    display:inline-block; margin-top:20px;
-    font-family:'IBM Plex Mono',monospace; font-size:12px; font-weight:600;
-    padding:8px 16px; border-radius:100px; letter-spacing:0.03em;
+    display:inline-block; margin-top:16px; font-family:'IBM Plex Mono',monospace;
+    font-size:11px; font-weight:600; padding:7px 14px; border-radius:100px; letter-spacing:0.03em;
   }
   .status-pill.move{ background:rgba(140,59,46,0.12); color:var(--wax); border:1px solid rgba(140,59,46,0.3); }
   .status-pill.stay{ background:rgba(95,168,147,0.14); color:var(--mint-deep); border:1px solid rgba(95,168,147,0.35); }
   .status-pill.newpill{ background:rgba(95,168,147,0.14); color:var(--mint-deep); border:1px solid rgba(95,168,147,0.35); }
 
   .not-found{
-    background:var(--paper); color:var(--ink); border-radius:18px; padding:28px 32px;
-    animation: unfold 0.5s ease;
-    box-shadow: var(--shadow);
+    background:var(--paper); color:var(--ink); border-radius:16px; padding:22px 24px;
+    animation: unfold 0.5s ease; box-shadow: var(--shadow); font-size:14px;
   }
   .not-found b{font-family:'Fraunces',serif;}
 
-  /* ---------- UNIT MAP ---------- */
-  .unit-grid{
-    display:grid; grid-template-columns:repeat(auto-fill, minmax(250px,1fr));
-    gap:16px;
-  }
-  .unit-card{
-    background:rgba(243,236,218,0.04);
-    border:1px solid var(--line);
-    border-radius:16px; padding:22px;
-  }
+  /* ---------- UNIT MAP (BABAK 2) ---------- */
+  .unit-grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(210px,1fr)); gap:14px; }
+  .unit-card{ background:rgba(243,236,218,0.04); border:1px solid var(--line); border-radius:14px; padding:18px; }
   .unit-old{
-    font-family:'IBM Plex Mono',monospace; font-size:12px; letter-spacing:0.08em;
-    color:rgba(243,236,218,0.5); text-transform:uppercase; margin-bottom:10px;
+    font-family:'IBM Plex Mono',monospace; font-size:11px; letter-spacing:0.07em;
+    color:rgba(243,236,218,0.5); text-transform:uppercase; margin-bottom:8px;
     display:flex; align-items:center; gap:8px;
   }
   .unit-old::before{content:"◈"; color:var(--wax);}
-  .unit-new-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px;}
-  .unit-new-list li{
-    font-family:'Fraunces', serif; font-weight:600; font-size:16px;
-    color:var(--gold); position:relative; padding-left:18px;
-  }
-  .unit-new-list li::before{
-    content:"→"; position:absolute; left:0; color:var(--mint);
-  }
-  .unit-note{
-    font-family:'Inter',sans-serif; font-size:11.5px; color:rgba(243,236,218,0.4);
-    margin-top:12px; line-height:1.5; font-style:italic;
-  }
+  .unit-new-list{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:6px;}
+  .unit-new-list li{ font-family:'Fraunces', serif; font-weight:600; font-size:14.5px; color:var(--gold); position:relative; padding-left:16px; }
+  .unit-new-list li::before{ content:"→"; position:absolute; left:0; color:var(--mint); }
+  .unit-note{ font-family:'Inter',sans-serif; font-size:11px; color:rgba(243,236,218,0.4); margin-top:10px; line-height:1.5; font-style:italic; }
   .newstaff-card{
     background: linear-gradient(150deg, rgba(95,168,147,0.14), rgba(95,168,147,0.03));
-    border:1px solid rgba(95,168,147,0.3);
-    border-radius:16px; padding:22px; margin-top:16px;
+    border:1px solid rgba(95,168,147,0.3); border-radius:14px; padding:18px; margin-top:14px;
   }
   .newstaff-card .unit-old{ color:var(--mint); }
   .newstaff-card .unit-old::before{ content:"✦"; color:var(--mint); }
 
-  /* ---------- KARU / KOORDINATOR ---------- */
-  .locked-box{
-    background: linear-gradient(150deg, rgba(140,59,46,0.14), rgba(140,59,46,0.03));
-    border:1px solid rgba(140,59,46,0.3);
-    border-radius:20px; padding:44px; text-align:center; position:relative;
-  }
-  .lock-icon{
-    width:56px; height:56px; margin:0 auto 20px;
-    display:flex; align-items:center; justify-content:center;
-  }
-  .locked-title{
-    font-family:'Fraunces',serif; font-weight:700; font-size:24px; margin-bottom:10px;
-  }
-  .locked-desc{ color:rgba(243,236,218,0.6); max-width:460px; margin:0 auto 22px; line-height:1.6; }
-  .locked-tag{
-    display:inline-block; font-family:'IBM Plex Mono',monospace; font-size:12px;
-    letter-spacing:0.1em; text-transform:uppercase; color:var(--wax);
-    border:1px dashed rgba(140,59,46,0.5); padding:10px 20px; border-radius:100px;
-  }
+  /* ---------- KARU / KOORDINATOR (BABAK 3) ---------- */
+  .karu-grid{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:14px; }
+  .karu-card{ background:rgba(243,236,218,0.04); border:1px solid var(--line); border-radius:14px; padding:18px; }
+  .karu-card.wide{ grid-column:1/-1; }
+  .karu-role{ font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.11em; text-transform:uppercase; color:var(--mint); }
+  .karu-title{ font-family:'Fraunces',serif; font-weight:700; font-size:17px; margin:6px 0 6px; color:var(--gold); }
+  .karu-name{ font-size:13.5px; color:rgba(243,236,218,0.85); margin:0; font-weight:500; }
+  .koor-wrap{ margin-top:14px; padding-top:14px; border-top:1px dashed var(--line); }
+  .koor-label{ font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:0.09em; text-transform:uppercase; color:rgba(243,236,218,0.45); display:block; margin-bottom:10px; }
+  .koor-list{ list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:8px; }
+  .koor-list li{ background:rgba(243,236,218,0.03); border-radius:10px; padding:10px 13px; display:flex; flex-direction:column; gap:2px; }
+  .koor-list li.pending{ border:1px dashed rgba(140,59,46,0.4); }
+  .koor-unit{ font-family:'Fraunces',serif; font-weight:600; font-size:13.5px; color:var(--paper); }
+  .koor-name{ font-size:12px; color:var(--mint); font-family:'Inter',sans-serif; }
+  .koor-name.badge-pending{ color:var(--wax); font-style:italic; }
+  .pj-wrap{ margin-top:8px; padding:8px 0 0 10px; border-top:1px dotted rgba(243,236,218,0.15); }
+  .pj-label{ font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:0.07em; text-transform:uppercase; color:rgba(243,236,218,0.4); display:block; margin-bottom:5px; }
+  .pj-item{ display:flex; flex-direction:column; gap:2px; }
 
   /* ---------- FOOTER ---------- */
-  footer{ padding:48px 0 60px; text-align:center; }
-  .sign-line{
-    max-width:280px; margin:0 auto 14px; border-top:1px solid var(--line); padding-top:14px;
-  }
+  footer{ padding:36px 0 56px; text-align:center; }
+  .sign-line{ max-width:280px; margin:0 auto 14px; border-top:1px solid var(--line); padding-top:14px; }
   .sign-name{ font-family:'Fraunces',serif; font-weight:600; font-size:16px; }
   .sign-role{ font-size:12px; color:rgba(243,236,218,0.5); font-family:'IBM Plex Mono',monospace; letter-spacing:0.06em; }
-  .footer-meta{ margin-top:26px; font-size:12px; color:rgba(243,236,218,0.35); font-family:'IBM Plex Mono',monospace; }
+  .footer-meta{ margin-top:22px; font-size:12px; color:rgba(243,236,218,0.35); font-family:'IBM Plex Mono',monospace; }
 
   @media (max-width:640px){
-    .envelope-stage{padding:26px 20px;}
-    .section{padding:48px 0;}
+    .quad{ padding:22px 18px; }
+    .envelope-stage{padding:18px 16px;}
     .route{flex-direction:column; align-items:stretch;}
     .route-arrow{ transform:rotate(90deg); text-align:center; }
   }
-
   @media (prefers-reduced-motion: reduce){
     *{ animation-duration:0.01ms !important; animation-iteration-count:1 !important; }
   }
@@ -345,82 +264,125 @@
 <body>
 <div class="texture"></div>
 <div class="wrap">
+  <div class="dashboard">
 
-  <header class="hero">
-    <span class="eyebrow">Instalasi Farmasi &nbsp;·&nbsp; RSUD AM Parikesit</span>
-    <div class="crest">
-      <svg width="74" height="74" viewBox="0 0 74 74" fill="none">
-        <circle cx="37" cy="37" r="36" stroke="#C9962E" stroke-width="1.2" opacity="0.5"/>
-        <circle cx="37" cy="37" r="29" fill="#5FA893" opacity="0.12"/>
-        <path d="M25 44 C25 44 30 30 37 30 C44 30 49 44 49 44" stroke="#C9962E" stroke-width="2" fill="none" stroke-linecap="round"/>
-        <ellipse cx="37" cy="46" rx="15" ry="6" stroke="#5FA893" stroke-width="2" fill="none"/>
-        <circle cx="37" cy="24" r="4" fill="#C9962E"/>
-      </svg>
+    <!-- ============ KUADRAN 1 (KIRI ATAS): JUDUL ============ -->
+    <div class="quad quad-title">
+      <span class="eyebrow">Instalasi Farmasi &nbsp;·&nbsp; RSUD AM Parikesit</span>
+      <div class="crest">
+        <svg width="56" height="56" viewBox="0 0 74 74" fill="none">
+          <circle cx="37" cy="37" r="36" stroke="#C9962E" stroke-width="1.2" opacity="0.5"/>
+          <circle cx="37" cy="37" r="29" fill="#5FA893" opacity="0.12"/>
+          <path d="M25 44 C25 44 30 30 37 30 C44 30 49 44 49 44" stroke="#C9962E" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <ellipse cx="37" cy="46" rx="15" ry="6" stroke="#5FA893" stroke-width="2" fill="none"/>
+          <circle cx="37" cy="24" r="4" fill="#C9962E"/>
+        </svg>
+      </div>
+      <h1 class="title">Amplop <em>Rahasia</em><br>Rolling Staf 2026</h1>
+      <p class="subtitle">Satu amplop, satu nama, satu tujuan baru. Buka setiap babak untuk mengetahui unit penugasan, peta perubahan unit, dan susunan Kepala Ruangan & Koordinator.</p>
+      <div class="date-seal">🗓️ Efektif <b>1 Agustus 2026</b></div>
     </div>
-    <h1 class="title">Amplop <em>Rahasia</em><br>Rolling Staf 2026</h1>
-    <p class="subtitle">Satu amplop, satu nama, satu tujuan baru. Cari namamu dan buka segelnya untuk mengetahui ke unit pelayanan mana kamu ditugaskan — atau apakah kamu tetap bertahan di unit lama.</p>
-    <div class="date-seal">🗓️ Efektif <b>1 Agustus 2026</b></div>
-  </header>
 
-  <!-- ============ BABAK 01 — MYSTERY REVEAL ============ -->
-  <section class="section" id="cari">
-    <span class="sec-label">Babak 01 — Buka Amplopmu</span>
-    <h2 class="sec-title">Kamu dipindah, atau tetap di sini?</h2>
-    <p class="sec-desc">Ketik nama lengkap kamu persis seperti di daftar absensi, lalu tekan tombol segel untuk membuka amplop misteri berisi unit penugasanmu mulai 1 Agustus 2026.</p>
+    <!-- ============ KUADRAN 2 (KANAN ATAS): BABAK 01 ============ -->
+    <div class="quad" id="cari">
+      <span class="sec-label">Babak 01 — Buka Amplopmu</span>
+      <h2 class="sec-title">Kamu dipindah, atau tetap di sini?</h2>
+      <p class="sec-desc">Ketik nama lengkap kamu persis seperti di daftar absensi, lalu tekan tombol segel untuk membuka amplop misteri berisi unit penugasanmu.</p>
 
-    <button class="babak-toggle" id="toggleBabak1">🕵️ Buka Babak 01 <span class="chev">⌄</span></button>
+      <button class="babak-toggle" id="toggleBabak1">🕵️ Buka Babak 01 <span class="chev">⌄</span></button>
 
-    <div class="babak-content" id="contentBabak1">
-      <div class="envelope-stage">
-        <div class="search-row">
-          <input id="nameInput" type="text" placeholder="Ketik nama kamu, mis. Aji Yuhda Wijaya…" autocomplete="off">
-          <button id="openBtn">🕵️ Buka Segel</button>
+      <div class="babak-content" id="contentBabak1">
+        <div class="envelope-stage">
+          <div class="search-row">
+            <input id="nameInput" type="text" placeholder="Ketik nama kamu…" autocomplete="off">
+            <button id="openBtn">🕵️ Buka Segel</button>
+          </div>
+          <div class="suggestions" id="suggestions"></div>
+          <div class="stage-hint">89 amplop telah disiapkan. Pilih namamu, lalu klik "Buka Segel".</div>
+          <div id="result"></div>
         </div>
-        <div class="suggestions" id="suggestions"></div>
-        <div class="stage-hint">89 amplop telah disiapkan oleh Instalasi Farmasi. Pilih namamu, lalu klik "Buka Segel" untuk melihat hasilnya.</div>
-        <div id="result"></div>
       </div>
     </div>
-  </section>
 
-  <!-- ============ BABAK 02 — UNIT MAP ============ -->
-  <section class="section" id="peta">
-    <span class="sec-label">Babak 02 — Peta Wilayah Baru</span>
-    <h2 class="sec-title">Perubahan Nama Unit Pelayanan</h2>
-    <p class="sec-desc">Beberapa unit lama melebur atau berganti nama menjadi unit-unit Depo Farmasi baru. Berikut arah perubahannya, sebagai pegangan sebelum kamu membuka amplopmu.</p>
+    <!-- ============ KUADRAN 3 (KIRI BAWAH): BABAK 02 ============ -->
+    <div class="quad" id="peta">
+      <span class="sec-label">Babak 02 — Peta Wilayah Baru</span>
+      <h2 class="sec-title">Perubahan Nama Unit Pelayanan</h2>
+      <p class="sec-desc">Beberapa unit lama berganti nama menjadi unit Depo Farmasi baru. Jika unit barumu sama dengan hasil perubahan nama unit lamamu, artinya kamu <strong>TETAP</strong> di unit yang sama.</p>
 
-    <button class="babak-toggle" id="toggleBabak2">🗺️ Buka Babak 02 <span class="chev">⌄</span></button>
+      <button class="babak-toggle" id="toggleBabak2">🗺️ Buka Babak 02 <span class="chev">⌄</span></button>
 
-    <div class="babak-content" id="contentBabak2">
-      <div class="unit-grid" id="unitGrid"></div>
-      <div id="newStaffArea"></div>
-    </div>
-  </section>
-
-  <!-- ============ BABAK 03 — KARU / KOORDINATOR ============ -->
-  <section class="section" id="karu">
-    <span class="sec-label">Babak 03 — Rahasia Terakhir</span>
-    <h2 class="sec-title">Siapa Kepala Ruang & Koordinator Unit?</h2>
-
-    <button class="babak-toggle" id="toggleBabak3">🔒 Buka Babak 03 <span class="chev">⌄</span></button>
-
-    <div class="babak-content" id="contentBabak3">
-      <div class="locked-box">
-        <div class="lock-icon">
-          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
-            <rect x="14" y="26" width="28" height="20" rx="4" fill="#8C3B2E" opacity="0.85"/>
-            <path d="M19 26v-6a9 9 0 0 1 18 0v6" stroke="#C9962E" stroke-width="3" fill="none" stroke-linecap="round"/>
-            <circle cx="28" cy="35" r="3" fill="#F3ECDA"/>
-            <rect x="26.5" y="37" width="3" height="6" rx="1.5" fill="#F3ECDA"/>
-          </svg>
-        </div>
-        <div class="locked-title">Masih Tersegel</div>
-        <p class="locked-desc">Penunjukan Kepala Ruang dan Koordinator untuk setiap unit pelayanan farmasi sedang difinalisasi oleh manajemen. Amplop ini akan dibuka menyusul — pantau terus papan pengumuman dan grup resmi instalasi.</p>
-        <span class="locked-tag">Nama Menyusul</span>
+      <div class="babak-content" id="contentBabak2">
+        <div class="unit-grid" id="unitGrid"></div>
+        <div id="newStaffArea"></div>
       </div>
     </div>
-  </section>
 
+    <!-- ============ KUADRAN 4 (KANAN BAWAH): BABAK 03 ============ -->
+    <div class="quad" id="karu">
+      <span class="sec-label">Babak 03 — Susunan Kepemimpinan</span>
+      <h2 class="sec-title">Kepala Ruangan & Koordinator Unit</h2>
+      <p class="sec-desc">Berikut susunan Kepala Ruangan, Koordinator, dan Penanggung Jawab unit pelayanan farmasi yang berlaku efektif 1 Agustus 2026.</p>
+
+      <button class="babak-toggle" id="toggleBabak3">🔑 Buka Babak 03 <span class="chev">⌄</span></button>
+
+      <div class="babak-content" id="contentBabak3">
+        <div class="karu-grid">
+
+          <div class="karu-card">
+            <span class="karu-role">Kepala Ruangan</span>
+            <h3 class="karu-title">Gudang Farmasi</h3>
+            <p class="karu-name">Apt. Ristianti Aprisia Pratiwi, S.Farm.</p>
+          </div>
+
+          <div class="karu-card">
+            <span class="karu-role">Kepala Ruangan</span>
+            <h3 class="karu-title">Farmasi IGD, IBS, Cathlab</h3>
+            <p class="karu-name">Apt. Yunisca Febrianty, S.Farm</p>
+          </div>
+
+          <div class="karu-card wide">
+            <span class="karu-role">Kepala Ruangan</span>
+            <h3 class="karu-title">Farmasi Rawat Inap</h3>
+            <p class="karu-name">Apt. Rizka Arianie Rusli, S.Farm</p>
+            <div class="koor-wrap">
+              <span class="koor-label">Membawahi 3 Koordinator</span>
+              <ul class="koor-list">
+                <li><span class="koor-unit">Koordinator Depo Farmasi IRNA 1 & Paviliun</span><span class="koor-name">Apt. Chaerul Reza Mahendra, S.Farm</span></li>
+                <li><span class="koor-unit">Koordinator Farmasi Klinis</span><span class="koor-name">Apt. Muhammad Fajar Atma Dinata, S.Farm</span></li>
+                <li><span class="koor-unit">Koordinator Farmasi Onkologi</span><span class="koor-name">Apt. Akhmad Fahri R, S.Farm</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="karu-card wide">
+            <span class="karu-role">Kepala Ruangan</span>
+            <h3 class="karu-title">Farmasi Terpadu</h3>
+            <p class="karu-name">Apt. Dwi Juwita Ningsih, S.Farm.</p>
+            <div class="koor-wrap">
+              <span class="koor-label">Membawahi 3 Koordinator</span>
+              <ul class="koor-list">
+                <li><span class="koor-unit">Koordinator Depo Farmasi IRIN & Maternitas</span><span class="koor-name">Apt. Hamziah Filza Fauziah, S.Farm</span></li>
+                <li>
+                  <span class="koor-unit">Koordinator Depo Farmasi Rawat Jalan</span><span class="koor-name">Apt. Framita Sari, S.Farm.</span>
+                  <div class="pj-wrap">
+                    <span class="pj-label">Membawahi 1 Penanggung Jawab Ruangan</span>
+                    <div class="pj-item"><span class="koor-unit">Penanggung Jawab Depo Farmasi Rawat Jalan Maternitas</span><span class="koor-name">Apt. Aji Yuhda Wijaya, S.Farm</span></div>
+                  </div>
+                </li>
+                <li class="pending"><span class="koor-unit">Koordinator ke-3</span><span class="koor-name badge-pending">Nama Menyusul</span></li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="wrap">
   <footer>
     <div class="sign-line">
       <div class="sign-name">Instalasi Farmasi RSUD AM Parikesit</div>
@@ -428,13 +390,23 @@
     </div>
     <div class="footer-meta">Pengumuman ini bersifat internal · Berlaku efektif 1 Agustus 2026</div>
   </footer>
-
 </div>
 
 <script>
 const staffData = [{"nama": "Aji Yuhda Wijaya,S.Farm.Apt", "lama": "CENDERAWASIH", "baru": "Depo Farmasi Cenderawasih"}, {"nama": "Apt. Rulina Citra, S.Farm", "lama": "CENDERAWASIH", "baru": "Farmasi Klinis"}, {"nama": "Ita Addawiyati,Amd.far", "lama": "CENDERAWASIH", "baru": "Depo Farmasi Cenderawasih"}, {"nama": "Dian Adrian", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Eka Fitriani Purwanti", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Mayang Azhari", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Muhammad Junaidi", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Tini", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Vivi Elvira, S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Viona Riska Dwi Lestari", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Hamziah Filza Fauziah, S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Apt.Chica Dwi Cahya,S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Apt. Halimatusya'diah,S.Farm", "lama": "FARM TERPADU", "baru": "Farmasi Klinis"}, {"nama": "Apt. Rina Safitri, S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Apt. Dwi Juwita Ningsih, S.Farm.", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Framita Sari, S.Farm.", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Liani Meyanti, S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Ngesti Mayang Pramandayanti, S.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Emilia Pratiwi, S.Farm", "lama": "FARM TERPADU", "baru": "Farmasi Klinis"}, {"nama": "Andrilidiani,Amd.far", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Dani Abdul Muttaqin, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Eko Hadi Noersyamsih,A.Md.FAr", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Mila Al Jufri, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Mila Ulfah Farista,Amd.far", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Nabila Safitri, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Nurma Safitri, A.Md.Far", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Putri Apriliana Maharani, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Henny Puspita Wati, Amd. Far", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Rizka Oktaviani, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Cenderawasih"}, {"nama": "Asanah, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Adelia Nor Ramadhini, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Nur Assyifa Jamiati, A.Md.Farm", "lama": "FARM TERPADU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Muhammad Irsandi Oktavianur", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Arjudin", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Yudistira Ang Jaya", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Fitriani", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Sugeng Sirojuddin", "lama": "GD.FARMASI", "baru": "Instalasi Farmasi"}, {"nama": "Indra Fathur Firmansyah, S.Farm", "lama": "GD.FARMASI", "baru": "Instalasi Farmasi"}, {"nama": "Ristianti Aprisia P,S.Farm.Apt", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Helen Tapilouw,S.Si.Apt", "lama": "GD.FARMASI", "baru": "Instalasi Farmasi"}, {"nama": "Hira Nur Silmi, S.Farm, Apt", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Hj.Fenny Heryani,Amd.far", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Dinah Retno Endah.A.Md.Farm", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Susiyanto Pangestu, Amd.Far", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Elly Suzanawati,A.Md.An", "lama": "GD.FARMASI", "baru": "Depo Farmasi Gudang Farmasi"}, {"nama": "Febrianto,A.Md.Far", "lama": "IBS", "baru": "Depo Farmasi IBS"}, {"nama": "Supiatun Nissa,Amd.Far", "lama": "IBS", "baru": "Depo Farmasi IBS"}, {"nama": "Desi Ana Susanti,Amd.Farm", "lama": "IBS", "baru": "Depo Farmasi IBS"}, {"nama": "Risma Saputri,A.Md.Farm", "lama": "IBS", "baru": "Depo Farmasi IBS"}, {"nama": "Siti Nurjanah,Amd.far", "lama": "IBS", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Apt. Yunisca Febrianty, S.Farm", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Ria Novita Sari, A.Md.Farm", "lama": "IGD", "baru": "Depo Farmasi IBS"}, {"nama": "Zahratun Nisa,A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Ani Eka Indriyani,Amd.Farm", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Sri Utami,Amd.far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Imroatul Widya Ningrat,A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Fatmah, A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Riza Vina,A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Dewi Rachmasuari,A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Yulinda Christine, A.Md.Far", "lama": "IGD", "baru": "Depo Farmasi IGD"}, {"nama": "Kurnia Della, A.Md.Farm", "lama": "RANAP", "baru": "Depo Farmasi IGD"}, {"nama": "Apt. Mayrani Permata Sari, S.Farm.", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Apt. Akhmad Fahri R, S.Farm", "lama": "RANAP", "baru": "Depo Farmasi Onkologi"}, {"nama": "Apt. Fariana Nur Santi, S.Farm", "lama": "RANAP", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Muhammad Fajar Atma Dinata, S.Farm", "lama": "RANAP", "baru": "Farmasi Klinis"}, {"nama": "Apt. Monalyta Panjaitan, S.Farm", "lama": "RANAP", "baru": "Depo Farmasi Rawat Jalan"}, {"nama": "Apt. Rizka Arianie Rusli, S.Farm.", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Edy Sudiyanto", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Jakpar", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Erwin", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Rahmawati,Amd.far", "lama": "RANAP", "baru": "Depo Farmasi Onkologi"}, {"nama": "Nurfitria Dian Hanjaya, Amd. Far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Monica Happying", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Amelia Tri Untari,A. Md.Farm", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Evi Kurniawati.A.Md.Far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Hairun Nissa,A.Md.Far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Nurhasanah,A.Md.Farm", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Ulfah Musyarofah Indah Sari, A.Md.Far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Yuni Anisa Ningsih,Amd.Farm", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Yudha Setiawan,Amd.far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Achmad Mustafa,Amd.far", "lama": "RANAP", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Apt. Badzlina Azyyati Maizan, S.Farm., M.Farm.Klin", "lama": "RANAP", "baru": "Farmasi Klinis"}, {"nama": "Apt.Chaerul Reza Mahendra, S.Farm", "lama": "UPSS", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Vindy Rofandi,Amd.far", "lama": "UPSS", "baru": "Depo Farmasi Onkologi"}, {"nama": "Anita Rahim,Amd.far", "lama": "UPSS", "baru": "Depo Farmasi Onkologi"}, {"nama": "Apt. Merry Handayani, S.Farm", "lama": "BARU", "baru": "Depo Farmasi IRIN & Maternitas"}, {"nama": "Apt. Shella Alifa El Safina, S.Farm", "lama": "BARU", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Dien Damar'atus Zahra, A.Md.Farm", "lama": "BARU", "baru": "Depo Farmasi Rawat Inap"}, {"nama": "Apt. Elsa Edita, S.Farm", "lama": "BARU", "baru": "Farmasi Klinis"}];
 
-/* ---------- label mapping unit lama ---------- */
+/* ---------- pemetaan penggantian nama unit (unit lama -> unit baru resmi) ---------- */
+/* jika unit baru staf PERSIS SAMA dengan nilai di sini, artinya staf TETAP di unit lama (hanya ganti nama) */
+const renameMap = {
+  'GD.FARMASI': 'Depo Farmasi Gudang Farmasi',
+  'IBS': 'Depo Farmasi IBS',
+  'IGD': 'Depo Farmasi IGD',
+  'FARM TERPADU': 'Depo Farmasi Rawat Jalan',
+  'RANAP': 'Depo Farmasi Rawat Jalan',
+  'UPSS': 'Depo Farmasi Onkologi'
+};
+
+/* ---------- label mapping unit lama untuk ditampilkan ---------- */
 function displayOldUnit(name){
   if(name === 'GD.FARMASI') return 'Gudang Farmasi';
   return name;
@@ -462,13 +434,9 @@ wireToggle('toggleBabak3','contentBabak3');
   const map = {};
   const newStaffUnits = new Set();
   staffData.forEach(d=>{
-    if(d.lama === 'BARU'){
-      newStaffUnits.add(d.baru);
-      return;
-    }
-    const key = d.lama;
-    if(!map[key]) map[key] = new Set();
-    map[key].add(d.baru);
+    if(d.lama === 'BARU'){ newStaffUnits.add(d.baru); return; }
+    if(!map[d.lama]) map[d.lama] = new Set();
+    map[d.lama].add(d.baru);
   });
 
   const grid = document.getElementById('unitGrid');
@@ -477,8 +445,8 @@ wireToggle('toggleBabak3','contentBabak3');
     card.className = 'unit-card';
     const news = Array.from(map[oldUnit]).sort();
     let note = '';
-    if(oldUnit === 'GD.FARMASI'){
-      note = '<div class="unit-note">Catatan: staf dengan keterangan "Depo Farmasi Gudang Farmasi" berarti tetap di unit lama (hanya penyesuaian nama).</div>';
+    if(renameMap[oldUnit]){
+      note = `<div class="unit-note">Catatan: staf dengan unit baru "${renameMap[oldUnit]}" berarti TETAP di unit lama (hanya penyesuaian nama).</div>`;
     }
     card.innerHTML = `
       <div class="unit-old">${displayOldUnit(oldUnit)}</div>
@@ -530,10 +498,7 @@ function renderSuggestions(query){
 
 input.addEventListener('input', (e)=>{
   renderSuggestions(e.target.value);
-  /* jika nama dikosongkan/dihapus, hasil ikut menghilang */
-  if(!e.target.value.trim()){
-    resultBox.innerHTML = '';
-  }
+  if(!e.target.value.trim()){ resultBox.innerHTML = ''; }
 });
 input.addEventListener('focus', (e)=> renderSuggestions(e.target.value));
 document.addEventListener('click', (e)=>{
@@ -592,9 +557,9 @@ function revealFor(rawName){
     return;
   }
 
-  /* kasus: GD.Farmasi -> Depo Farmasi Gudang Farmasi = tetap di unit lama (hanya ganti nama) */
-  const isSameGudang = (found.lama === 'GD.FARMASI' && found.baru === 'Depo Farmasi Gudang Farmasi');
-  const isMoving = !isSameGudang && (norm(found.lama) !== norm(found.baru));
+  /* kasus umum: cek apakah unit baru sama dengan hasil penggantian nama unit lama (=TETAP) */
+  const isSameUnit = renameMap[found.lama] && renameMap[found.lama] === found.baru;
+  const isMoving = !isSameUnit && (norm(found.lama) !== norm(found.baru));
 
   resultBox.innerHTML = `
     <div class="reveal-card">
